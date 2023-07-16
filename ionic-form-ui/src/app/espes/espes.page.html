@@ -1,0 +1,38 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+        </ion-buttons>
+        <ion-title>Espes Applicant Form</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form (ngSubmit)="saveData()">
+        <ion-item>
+            <ion-label position="floating">Department</ion-label>
+            <ion-select [(ngModel)]="username1" name="username">
+                <ion-select-option value="CAFAD">CAFAD</ion-select-option>
+                <ion-select-option value="CICS">CICS</ion-select-option>
+                <ion-select-option value="CIT">CIT</ion-select-option>
+                <ion-select-option value="COE">COE</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+        <ion-item>
+            <ion-label position="floating">Type of Violation</ion-label>
+            <ion-select [(ngModel)]="message" name="message1">
+                <ion-select-option value="Bullying">Bullying</ion-select-option>
+                <ion-select-option value="PDA">PDA</ion-select-option>
+                <ion-select-option value="Sana aus kapa lods">Sana aus kapa lods</ion-select-option>
+            </ion-select>
+        </ion-item>
+
+
+        <ion-item>
+            <ion-label position="floating">Report</ion-label>
+            <ion-textarea [(ngModel)]="message1" name="message"></ion-textarea>
+        </ion-item>
+        <ion-button type="submit">Save</ion-button>
+    </form>
+</ion-content>
